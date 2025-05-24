@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengkel Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BENGKEL ONLINE</div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-home">HOME</a></li>
+                <li><a href="#" id="nav-about">ABOUT</a></li>
+                <li><a href="#" id="nav-contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="hero-left">
+                <h1>BENGKEL</h1>
+                <h1>ONLINE</h1>
+                <h1>PAK KAMSO</h1>
+            </div>
+            <div class="hero-right">
+                <div class="form-container" id="login-form">
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <input type="text" id="login-username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group password-container">
+                            <input type="password" id="login-password" placeholder="Password" required>
+                            <span class="toggle-password" data-target="login-password">
+                                <i class="far fa-eye"></i>
+                            </span>
+                        </div>
+                        <button type="submit">Login</button>
+                        <p class="form-footer">Belum punya akun? <a href="#" id="show-register">Daftar disini</a></p>
+                    </form>
+                </div>
+
+                <div class="form-container hidden" id="register-form">
+                    <h2>Daftar</h2>
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <input type="text" id="register-username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group password-container">
+                            <input type="password" id="register-password" placeholder="Password" required>
+                            <span class="toggle-password" data-target="register-password">
+                                <i class="far fa-eye"></i>
+                            </span>
+                        </div>
+                        <div class="form-group password-container">
+                            <input type="password" id="confirm-password" placeholder="Konfirmasi Password" required>
+                            <span class="toggle-password" data-target="confirm-password">
+                                <i class="far fa-eye"></i>
+                            </span>
+                        </div>
+                        <button type="submit">Daftar</button>
+                        <p class="form-footer">Sudah punya akun? <a href="#" id="show-login">Login disini</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dashboard Section -->
+    <div class="dashboard hidden" id="dashboard">
+        <div class="dashboard-header">
+            <h2>Selamat Datang, <span id="logged-in-user"></span></h2>
+            <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        
+        <div class="dashboard-menu">
+            <div class="menu-card" id="consultation">
+                <i class="fas fa-tools"></i>
+                <h3>Konsultasi Kerusakan</h3>
+            </div>
+            <div class="menu-card" id="booking">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Booking Service</h3>
+            </div>
+            <div class="menu-card" id="status">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>Status Service</h3>
+            </div>
+            <div class="menu-card" id="payment">
+                <i class="fas fa-credit-card"></i>
+                <h3>Pembayaran</h3>
+            </div>
+        </div>
+        
+        <div class="dashboard-content" id="dashboard-content">
+            <!-- Konten akan dimuat dinamis di sini -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">PAKKAMSO</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
